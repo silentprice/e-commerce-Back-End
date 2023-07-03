@@ -51,6 +51,10 @@ Product.init(
     modelName: 'product',
   }
 );
+// Product belongs to Category
+Product.belongsTo(Category, {
+  foreignKey: 'category_id',
+});
 // Product belongs to many Tag models
 Product.belongsToMany(Tag, {
   through: ProductTag,
