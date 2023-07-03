@@ -51,5 +51,11 @@ Product.init(
     modelName: 'product',
   }
 );
+// Product belongs to many Tag models
+Product.belongsToMany(Tag, {
+  through: ProductTag,
+  foreignKey: 'product_id',
+});
+
 
 module.exports = Product;
