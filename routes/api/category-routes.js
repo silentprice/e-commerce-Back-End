@@ -44,7 +44,7 @@ router.put('/:id', (req, res) => {
         res.status(404).json({ message: 'No category with this id!' });
         return;
       }
-      res.json({ message: 'Successfully deleted category!!' });
+      res.json({ message: 'Successfully updated category!!' });
     })
     .catch((err) => res.status(500).json(err));
 });
